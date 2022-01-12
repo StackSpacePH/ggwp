@@ -4,13 +4,13 @@ import { useParams } from 'react-router-dom';
 import * as api from "../api/api.js";
 
 export default function Page () {
-    const [page, setPage] = useState({});
+    const [user, setUser] = useState({});
     const { userslug } = useParams();
 
     useEffect(() => {
         async function fetchData() {
             await api.fetchUser(userslug)
-                .then((returnedData) => setPage(returnedData.data))
+                .then((returnedData) => setUser(returnedData.data))
                 .catch((error) => console.log(error.message));
         }
         fetchData();
@@ -18,10 +18,10 @@ export default function Page () {
 
     return (
         <div>
-            Username: {page.username}#0000<br></br>
-            Userslug: {page.userslug}<br></br>
-            Bio: {page.bio}<br></br>
-            Current Playing: {page.current_playing}<br></br>
+            Username: {user.username}#{user.usertag}<br></br>
+            Userslug: {user.userslug}<br></br>
+            Bio: {user.bio}<br></br>
+            Current Playing: {user.current_playing}<br></br>
         </div>
     )
 }
