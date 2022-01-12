@@ -20,10 +20,12 @@ export const getUserPage = async (req, res) => {
 }
 
 export const addUserPage = async (req, res) => {
-    const { username, userslug, pfp, bio, game_links, current_playing } = req.body;
+    var { username, usertag, userslug, pfp, bio, game_links, current_playing } = req.body;
+
+    userslug = userslug + "-" + usertag;
 
     const createNewUserPage = new user({
-        username, userslug, pfp, bio, game_links, current_playing
+        username, usertag, userslug, pfp, bio, game_links, current_playing
     });
 
     try {
