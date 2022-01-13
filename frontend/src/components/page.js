@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 import { fetchUser } from '../actions/pages.js';
 import ExternalLink from '../assets/icons/external-link-alt-solid.svg';
+import CheckMark from '../assets/icons/check-mark.svg';
 
 export default function Page () {
     const user = useSelector((state) => state.page.value)
@@ -31,9 +32,14 @@ const MainPage = ({ user }) => {
                     className="w-32 rounded-full"
                     src={user.pfp}
                 ></img>
-                <div className="mt-5 text-3xl text-white">
-                    <span className="font-bold">{user.username}</span>
-                    <span className="text-[#878787]">#{user.usertag}</span>
+                <div className="flex flex-row items-center space-x-1 mt-5 text-3xl text-white">
+                    <div>
+                        <span className="font-bold">{user.username}</span>
+                        <span className="text-[#878787]">#{user.usertag}</span>
+                    </div>
+                    {user.isVerified
+                        ? <span><img className='w-10/12' src={CheckMark}></img></span>
+                        : <div/>}
                 </div>
                 <div className="flex flex-row mt-5 space-x-3">
                     {Object.entries(user.game_links)
