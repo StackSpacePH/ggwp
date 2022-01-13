@@ -65,18 +65,18 @@ function PageHeader({ state }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <div className="flex justify-center items-center">
-              <Link to='/'>
+            <Link to='/'>
+              <div className="flex justify-center items-center">
                 <img
                   className="h-8 w-auto sm:h-11"
                   src={logosingle}
                   alt="Unlevel Logo"
                 />
-              </Link>
-              <span className="ml-3 text-white text-3xl font-bold">
-                {state.username}
-              </span>
-            </div>
+                <span className="ml-3 text-white text-3xl font-bold">
+                  {state.username}
+                </span>
+              </div>
+            </Link>
           </div>
 
           <div className="md:flex items-center justify-end md:flex-1 lg:w-0">
