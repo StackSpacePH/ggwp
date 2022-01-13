@@ -5,8 +5,9 @@ const userSchema = mongoose.Schema({
     usertag: String,
     userslug: String,
     pfp: String,
+    cover: String,
     bio: String,
-    game_links: String,
+    game_links: {},
     current_playing: String,
 });
 
