@@ -5,8 +5,6 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { fetchUser } from '../actions/pages.js';
 import ExternalLink from '../assets/icons/external-link-alt-solid.svg';
 
-// https://preview.redd.it/oe901qo4hth61.png?width=3840&format=png&auto=webp&s=eac9b8f429cf2d88a84ed865b6ee5493ff452dcb
-
 export default function Page () {
     const user = useSelector((state) => state.page.value)
 
@@ -28,7 +26,7 @@ const MainPage = ({ user }) => {
                     ? <img className='absolute object-cover -z-10 top-0.5 w-screen h-4/6' src={user.cover}></img>
                     : <div className='absolute object-cover -z-10 top-0.5 w-screen h-4/6 bg-[#181717]'></div>}
             </div>
-            <div className="flex flex-col justify-center items-center m-auto mt-20 content-center bg-[#222222] rounded-md py-20 shadow w-10/12 sm:w-10/12 lg:w-8/12 xl:w-6/12">
+            <div className="flex flex-col justify-center items-center m-auto mt-16 content-center bg-[#222222] rounded-md py-20 shadow w-10/12 sm:w-10/12 lg:w-8/12 xl:w-6/12">
                 <img
                     className="w-32 rounded-full"
                     src={user.pfp}
@@ -43,7 +41,7 @@ const MainPage = ({ user }) => {
                             <GameLink key={i} game_name={game_name} game_link={values.link} />
                     ))}
                 </div>
-                <p className="mt-6 text-white">
+                <p className="mt-6 px-20 text-white">
                     {user.bio}
                 </p>
             </div>
