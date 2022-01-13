@@ -1,7 +1,18 @@
 import React from 'react';
 import LogoSingle from '../assets/images/logosingle.svg';
+import { Link, useLocation } from "react-router-dom";
 
 export default function Footer () {
+    const currentRoute = useLocation().pathname;
+
+    return (
+        <>
+            {currentRoute.localeCompare("/") == 0 ? <MainFooter/> : <div/>}
+        </>
+    );
+}
+
+function MainFooter() {
     return (
         <footer className="px-4 divide-y mt-32 text-white dark:bg-coolGray-800 dark:text-coolGray-100">
             <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
@@ -68,5 +79,5 @@ export default function Footer () {
             </div>
             <div className="py-6 text-sm text-center dark:text-coolGray-400">© 2022 UnLevel. All rights reserved.</div>
         </footer>
-    )
+    );
 }
