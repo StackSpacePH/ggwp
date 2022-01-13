@@ -1,23 +1,21 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import * as api from "../api/api.js";
+import { fetchUser } from '../actions/pages.js';
 
 export default function Page () {
-    const [user, setUser] = useState({});
+    const user = useSelector((state) => state.page.value)
+
+    const dispatch = useDispatch();
     const { userslug } = useParams();
 
     useEffect(() => {
-        async function fetchData() {
-            await api.fetchUser(userslug)
-                .then((returnedData) => setUser(returnedData.data))
-                .catch((error) => console.log(error.message));
-        }
-        fetchData();
-    }, [userslug])
+        dispatch(fetchUser(userslug))
+    }, [user, dispatch])
 
     return (
-        <div>
+        <div className="text-white">
             Username: {user.username}#{user.usertag}<br></br>
             Userslug: {user.userslug}<br></br>
             Bio: {user.bio}<br></br>
