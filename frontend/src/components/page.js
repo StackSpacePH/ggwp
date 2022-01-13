@@ -27,9 +27,9 @@ const MainPage = ({ user }) => {
                     ? <img className='absolute object-cover -z-10 top-0.5 w-screen h-4/6' src={user.cover}></img>
                     : <div className='absolute object-cover -z-10 top-0.5 w-screen h-4/6 bg-[#181717]'></div>}
             </div>
-            <div className="flex flex-col justify-center items-center m-auto mt-16 content-center bg-[#222222] rounded-md py-20 shadow w-10/12 sm:w-10/12 lg:w-8/12 xl:w-6/12">
+            <div className="flex flex-col justify-center items-center m-auto mt-8 content-center bg-[#222222] rounded-md py-20 shadow w-10/12 sm:w-10/12 lg:w-8/12 xl:w-6/12">
                 <img
-                    className="w-32 rounded-full"
+                    className="rounded-full w-48"
                     src={user.pfp}
                 ></img>
                 <div className="flex flex-row items-center space-x-1 mt-5 text-3xl text-white">
