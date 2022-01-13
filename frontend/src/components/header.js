@@ -82,7 +82,7 @@ function PageHeader({ state }) {
           <div className="md:flex items-center justify-end md:flex-1 lg:w-0">
             <a
               href="#"
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-stone-600 rounded-md shadow-sm text-base font-medium text-white bg-transparent hover:bg-indigo-700 hover:text-white hover:border-indigo-700"
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-white bg-[#131313] hover:bg-indigo-700 hover:text-white"
             >
               Create your page like this
             </a>
