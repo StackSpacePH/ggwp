@@ -51,7 +51,7 @@ const MainPage = ({ user }) => {
 
 const GameLink = ({ game_name, game_image, game_link }) => {
     return (
-        <a href="#" onClick={() => openLink(game_link)} className="text-white border-[0.7px] border-[#898989] rounded-full py-1 px-4">
+        <a href="#" onClick={() => openLink(game_link)} className="text-white border-[0.7px] border-[#898989] rounded-full py-2 px-6">
             <div className="flex flex-row space-x-2">
                 <h1>{game_name}</h1>
                 <img className="w-3" src={ExternalLink}></img>
