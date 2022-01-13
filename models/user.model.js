@@ -4,6 +4,7 @@ const userSchema = mongoose.Schema({
     username: String,
     usertag: String,
     userslug: String,
+    isVerified: Boolean,
     pfp: String,
     cover: String,
     bio: String,
