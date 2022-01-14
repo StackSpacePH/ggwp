@@ -16,15 +16,22 @@ app.use(express.urlencoded({extended: true}))
 
 app.use("/api/users", pages);
 
-mongoose
-    .connect(process.env.ATLAS_URI, { useNewUrlParser: true })
-    .then(() => console.log("Database connected successfully!"))
-    .catch((err) => console.log(err));
+const connectToMongo = async () => {
+    await mongoose.connect(process.env.ATLAS_URI, {
+        useNewUrlParser: true,
+    })
+    
+    return mongoose;
+}
 
 mongoose.Promise = global.Promise;
 
+connectToMongo()
+    .then(() => console.log("Successfully connected to the Mongo Database Atlas!"))
+    .catch((err) => console.log(err));
+
 app.listen(port, () => {
-    console.log(`Server listening on port ${port}`);
+    console.log(`Server established, listening on port ${port}`);
 })
 
-export default app; 
+export default app;
