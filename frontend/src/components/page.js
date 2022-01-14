@@ -21,19 +21,63 @@ export default function Page () {
 
 const MainPage = ({ user }) => {
     return (user.username ? (
-        <main className='pb-7 shadow-2xl'>
+        <main className='
+            pb-7
+            shadow-2xl'
+        >
             <div>
                 {user.cover
-                    ? <img className='absolute object-cover -z-10 top-0 w-screen h-4/6' alt="User cover" src={user.cover}></img>
-                    : <div className='absolute object-cover -z-10 top-0 w-screen h-4/6 bg-[#181717]'></div>}
+                    ? <img className='
+                        absolute
+                        object-cover
+                        -z-10
+                        top-0
+                        w-screen
+                        h-4/6' 
+                        alt="User cover"
+                        src={user.cover}
+                    ></img>
+                    : <div className='
+                        absolute
+                        object-cover
+                        -z-10
+                        top-0
+                        w-screen
+                        h-4/6
+                        bg-[#181717]'
+                    ></div>}
             </div>
-            <div className="flex flex-col justify-center items-center m-auto mt-8 content-center bg-[#222222] rounded-md py-20 shadow w-10/12 sm:w-10/12 lg:w-8/12 xl:w-6/12">
+            <div className="
+                flex
+                flex-col
+                justify-center
+                items-center
+                m-auto
+                mt-8
+                content-center
+                bg-[#222222]
+                rounded-md
+                py-20
+                shadow
+                w-10/12
+                sm:w-10/12
+                lg:w-8/12
+                xl:w-6/12"
+            >
                 <img
                     className="rounded-full w-48"
                     src={user.pfp}
                     alt="User"
                 ></img>
-                <div className="flex flex-row items-center space-x-1 mt-5 text-3xl text-white">
+                <div className="
+                    flex
+                    flex-row
+                    items-center
+                    space-x-1
+                    mt-5
+                    text-3xl
+                    text-white"
+                >
                     <div>
                         <span className="font-bold">{user.username}</span>
                         <span className="text-[#878787]">#{user.usertag}</span>
@@ -53,7 +97,15 @@ const MainPage = ({ user }) => {
                 </p>
             </div>
         </main>
-    ) : <div className="flex text-5xl justify-center font-bold text-white m-auto mt-8">Loading...</div>);
+    ) : <div className="
+            flex
+            text-5xl
+            justify-center
+            font-bold
+            text-white
+            m-auto
+            mt-8"
+        >Loading...</div>);
 }
 
 const GameLink = ({ game_name, game_image, game_link }) => {
