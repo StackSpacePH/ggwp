@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <>
-      {currentRoute.localeCompare("/") == 0 ? <HeaderDefault/> : <PageHeader state={state}/>}
+      {currentRoute.localeCompare("/") === 0 ? <HeaderDefault/> : <PageHeader state={state}/>}
     </>
   )
 }
@@ -25,7 +25,7 @@ function HeaderDefault() {
               <img
                 className="h-8 w-auto sm:h-11"
                 src={logo}
-                alt="Unlevel Logo"
+                alt=""
               />
             </Link>
           </div>
@@ -70,7 +70,7 @@ function PageHeader({ state }) {
                 <img
                   className="h-8 w-auto sm:h-11"
                   src={logosingle}
-                  alt="Unlevel Logo"
+                  alt=""
                 />
                 <span className="ml-3 text-white text-3xl font-bold">
                   {state.username}

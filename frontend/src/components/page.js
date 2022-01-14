@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { fetchUser } from '../actions/pages.js';
 import ExternalLink from '../assets/icons/external-link-alt-solid.svg';
 import CheckMark from '../assets/icons/check-mark.svg';
@@ -24,13 +24,14 @@ const MainPage = ({ user }) => {
         <main className='pb-7 shadow-2xl'>
             <div>
                 {user.cover
-                    ? <img className='absolute object-cover -z-10 top-0 w-screen h-4/6' src={user.cover}></img>
+                    ? <img className='absolute object-cover -z-10 top-0 w-screen h-4/6' alt="User cover" src={user.cover}></img>
                     : <div className='absolute object-cover -z-10 top-0 w-screen h-4/6 bg-[#181717]'></div>}
             </div>
             <div className="flex flex-col justify-center items-center m-auto mt-8 content-center bg-[#222222] rounded-md py-20 shadow w-10/12 sm:w-10/12 lg:w-8/12 xl:w-6/12">
                 <img
                     className="rounded-full w-48"
                     src={user.pfp}
+                    alt="User"
                 ></img>
                 <div className="flex flex-row items-center space-x-1 mt-5 text-3xl text-white">
                     <div>
@@ -38,7 +39,7 @@ const MainPage = ({ user }) => {
                         <span className="text-[#878787]">#{user.usertag}</span>
                     </div>
                     {user.isVerified
-                        ? <span title="Verified"><img className='w-10/12' src={CheckMark}></img></span>
+                        ? <span title="Verified"><img className='w-10/12' alt="Verified checkmark" src={CheckMark}></img></span>
                         : <div/>}
                 </div>
                 <div className="flex flex-wrap px-4 mt-5 mx-32">
@@ -57,15 +58,11 @@ const MainPage = ({ user }) => {
 
 const GameLink = ({ game_name, game_image, game_link }) => {
     return (
-        <a href={game_link} target="_blank" title={game_link} className="text-white border-[0.7px] border-[#898989] rounded-full py-2 px-3 mx-1 mt-3 m-auto">
+        <a href={game_link} target="_blank" rel="noreferrer" title={game_link} className="text-white border-[0.7px] border-[#898989] rounded-full py-2 px-3 mx-1 mt-3 m-auto">
             <div className="flex flex-row space-x-2">
                 <h1>{game_name}</h1>
-                <img className="w-3" src={ExternalLink}></img>
+                <img className="w-3" alt="External link" src={ExternalLink}></img>
             </div>
         </a>
     );
-}
-
-function openLink(link) {
-    window.open(link, "_blank")
 }

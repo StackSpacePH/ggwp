@@ -1,13 +1,13 @@
 import React from 'react';
 import LogoSingle from '../assets/images/logosingle.svg';
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export default function Footer () {
     const currentRoute = useLocation().pathname;
 
     return (
         <>
-            {currentRoute.localeCompare("/") == 0 ? <MainFooter/> : <div/>}
+            {currentRoute.localeCompare("/") === 0 ? <MainFooter/> : <div/>}
         </>
     );
 }
@@ -19,7 +19,7 @@ function MainFooter() {
                 <div className="lg:w-1/3">
                     <a href="#" className="flex justify-center space-x-3 lg:justify-start">
                         <div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-violet-400">
-                            <img src={LogoSingle}></img>
+                            <img alt="" src={LogoSingle}></img>
                         </div>
                         <span className="self-center text-2xl font-semibold">UnLevel</span>
                     </a>
