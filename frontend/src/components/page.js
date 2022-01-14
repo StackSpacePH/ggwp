@@ -86,13 +86,13 @@ const MainPage = ({ user }) => {
                         ? <span title="Verified"><img className='w-10/12' alt="Verified checkmark" src={CheckMark}></img></span>
                         : <div/>}
                 </div>
-                <div className="flex flex-wrap px-4 mt-5 mx-32">
+                <div className="flex flex-wrap px-2 mt-5 mx-16">
                     {Object.entries(user.game_links)
                         .map(([game_name, values], i) => (
                             <GameLink key={i} game_name={game_name} game_link={values.link} />
                     ))}
                 </div>
-                <p className="mt-6 px-20 text-white">
+                <p className="mt-6 px-20 text-[#F2F2F2]">
                     {user.bio}
                 </p>
             </div>
@@ -110,9 +110,20 @@ const MainPage = ({ user }) => {
 
 const GameLink = ({ game_name, game_image, game_link }) => {
     return (
-        <a href={game_link} target="_blank" rel="noreferrer" title={game_link} className="text-white border-[0.7px] border-[#898989] rounded-full py-2 px-3 mx-1 mt-3 m-auto">
+        <a href={game_link} target="_blank" rel="noreferrer" title={game_link} className="
+            text-white
+            border-[0.7px]
+            border-[#898989]
+            rounded-full
+            py-2
+            px-3
+            mx-1
+            mt-3
+            m-auto
+            hover:bg-[#333333]"
+        >
             <div className="flex flex-row space-x-2">
-                <h1>{game_name}</h1>
+                <h1 className="font-medium">{game_name}</h1>
                 <img className="w-3" alt="External link" src={ExternalLink}></img>
             </div>
         </a>
