@@ -38,7 +38,7 @@ const MainPage = ({ user }) => {
                         <span className="text-[#878787]">#{user.usertag}</span>
                     </div>
                     {user.isVerified
-                        ? <span><img className='w-10/12' src={CheckMark}></img></span>
+                        ? <span title="Verified"><img className='w-10/12' src={CheckMark}></img></span>
                         : <div/>}
                 </div>
                 <div className="flex flex-wrap px-4 mt-5 mx-32">
@@ -57,7 +57,7 @@ const MainPage = ({ user }) => {
 
 const GameLink = ({ game_name, game_image, game_link }) => {
     return (
-        <a href="#" onClick={() => openLink(game_link)} className="text-white border-[0.7px] border-[#898989] rounded-full py-2 px-3 mx-1 mt-3 m-auto">
+        <a href={game_link} target="_blank" title={game_link} className="text-white border-[0.7px] border-[#898989] rounded-full py-2 px-3 mx-1 mt-3 m-auto">
             <div className="flex flex-row space-x-2">
                 <h1>{game_name}</h1>
                 <img className="w-3" src={ExternalLink}></img>
