@@ -1,5 +1,5 @@
 import axios from 'axios';
 
-const url = "http://localhost:5000/api/users";
+const APIENDPOINT = "https://https://calm-spire-77666.herokuapp.com/api/";
 
-export const fetchUser = async (userslug) => await axios.get(`${url}/${userslug}`);
+export const fetchUser = async (userslug) => await axios.get(`${APIENDPOINT}/users/${userslug}`);
