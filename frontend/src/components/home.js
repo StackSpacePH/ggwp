@@ -1,5 +1,6 @@
 import React from 'react'
 import pagepreview from '../assets/images/pagepreview.png';
+import gridlines from '../assets/images/gridlines-bg.svg'
 
 export default function Home () {
     return (
@@ -15,12 +16,23 @@ export default function Home () {
           lg:px-8
           xl:mt-28"
         >
+          <img
+            src={gridlines}
+            className="
+              absolute
+              top-0
+              left-0
+              right-0 w-full
+              -z-10
+            "
+          ></img>
             <div className="text-center">
               <h1 className="
                 text-4xl
                 tracking-tight
                 font-extrabold
                 text-gray-900
+                lg:mx-52
                 sm:text-5xl
                 md:text-6xl"
               >
@@ -28,29 +40,41 @@ export default function Home () {
                   block
                   xl:inline
                   text-white"
-                >Establish your</span>{' '}
+                >Showcase your</span>{' '}
                 <span className="
                   block
                   text-indigo-600
                   xl:inline"
-                >gaming brand.</span>
+                >gaming identity</span>{' '}
+                <span className="
+                  block
+                  xl:inline
+                  text-white"
+                >with</span>{' '}
+                <span className="
+                  block
+                  bg-gradient-to-r
+                  text-transparent
+                  bg-clip-text
+                  from-cyan-500
+                  to-blue-500
+                  xl:inline"
+                >one link.</span>
               </h1>
               <p className="
-                mt-3
+                mt-7
                 text-base
                 max-w-xl
-                mx-auto
+                mx-16
                 text-white
-                sm:mt-5
-                sm:text-lg
-                md:mt-5
-                md:text-xl
-                lg:mx-auto"
+                md:mx-auto
+                lg:mx-auto
+                lg:mt-3"
               >
-                UnLevel allows you to establish your gaming identity to the world. Share epic game highlights, game links, and game achievements - all in one place.
+                Launch your own gaming page in seconds, link all of your games, share your own epic game highlights, game achievements, and more - all in one place, and share it all over the internet.
               </p>
               <div className="
-                mt-5
+                mt-10
                 sm:mt-8
                 sm:flex
                 sm:justify-center
@@ -93,7 +117,7 @@ export default function Home () {
               <div className="mt-6 text-white">
                 <h1 className="text-5xl font-extrabold">wdym?</h1>
                 <p className="mt-4 text-lg">
-                  UnLevel lets you create your personal brand as a gamer. Instead of learning how to code like a hacker to create a website for your gaming blah blah, you can publish your own Gaming Profile and let the world see what you play and see your gaming links/accounts, they can also join to your currently playing game (Of course, that’s soon).
+                  UnLevel lets you create your own page as a gamer. Instead of learning how to code like a hacker, you can launch your own gaming page in seconds with UnLevel. Choose your own username, gamertag, add your games, and customize your page whatever you want. Showcase everything you love to play, the current game you're playing and let other people join and play with you, and share your UnLevel link with your friends or the whole world.
                 </p>
               </div>
             </div>
