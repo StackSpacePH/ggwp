@@ -87,8 +87,9 @@ export default function Home () {
               </div>
             </div>
 
-            <div className="flex mt-[+200px] space-x-8">
-              <img src={pagepreview}></img>
+            <div className="flex flex-col mt-[+200px] space-x-8 lg:flex-row">
+              <img className="w-auto
+              " src={pagepreview}></img>
               <div className="mt-6 text-white">
                 <h1 className="text-5xl font-extrabold">wdym?</h1>
                 <p className="mt-4 text-lg">
