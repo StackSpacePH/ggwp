@@ -44,7 +44,7 @@ function HeaderDefault() {
           >
             <Link to='/'>
               <img
-                className="h-8 w-auto sm:h-11"
+                className="h-8 w-40 sm:h-11"
                 src={logo}
                 alt=""
               />

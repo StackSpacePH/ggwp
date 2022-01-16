@@ -55,7 +55,7 @@ function MainFooter() {
                             self-center
                             text-2xl
                             font-semibold"
-                        >UnLevel</span>
+                        >GGWP</span>
                     </a>
                 </div>
                 <div className="
@@ -142,7 +142,7 @@ function MainFooter() {
                 text-sm
                 text-center
                 dark:text-coolGray-400"
-            >© 2022 UnLevel. All rights reserved.</div>
+            >© 2022 GGWP Technology. All rights reserved.</div>
         </footer>
     );
 }
