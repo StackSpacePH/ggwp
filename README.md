@@ -35,4 +35,4 @@ The open-source gaming profile web app where you're incharge of your own data an
 - [Tailwind CSS](https://tailwindcss.com/)
 
 # Installation
-Typical installation of Nodejs. If you're not familiar with it, documentation about installation will coming soon.
+Typical installation of Nodejs. If you're not familiar with it, documentation about installation will be coming soon.
