@@ -124,7 +124,7 @@ const Header = () => {
   );
 }
 
-const PageHeader = ({ state }) => {
+export const PageHeader = ({ username }) => {
   return (<Popover className="
     relative
     bg-transparent"
@@ -156,18 +156,21 @@ const PageHeader = ({ state }) => {
                 justify-center
                 items-center"
               >
-                <Image
-                  className="h-8 w-auto sm:h-11"
-                  src={logosingle}
-                  alt=""
-                />
+                <Link href='/'>
+                  <Image
+                    src={logosingle}
+                    alt=""
+                    width="50"
+                    height="40"
+                  />
+                </Link>
                 <span className="
                   ml-3
                   text-white
                   text-3xl
                   font-bold"
                 >
-                  {state.username}
+                  {username}
                 </span>
               </div>
             </Link>
