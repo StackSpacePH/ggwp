@@ -118,7 +118,7 @@ export default function Home () {
               <div className="mt-6 text-white">
                 <h1 className="text-5xl font-extrabold">wdym?</h1>
                 <p className="mt-4 text-lg">
-                  GGWP lets you create your own page as a gamer. Instead of learning how to code like a hacker, you can launch your own gaming page in seconds with GGWP. Choose your own username, gamertag, add your games, and customize your page whatever you want. Showcase everything you love to play, the current game you're playing and let other people join and play with you, and share your{' '}
+                  GGWP lets you create your own page as a gamer. Instead of learning how to code like a hacker, you can launch your own gaming page in seconds with GGWP. Choose your own username, gamertag, add your games, and customize your page whatever you want. Showcase everything you love to play, the current game you&apos;re playing and let other people join and play with you, and share your{' '}
                   <a
                     href="https://ggwp.link/"
                     className="underline"
