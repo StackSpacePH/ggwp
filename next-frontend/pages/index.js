@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import pagepreview from '../assets/images/pagepreview.png';
 import gridlines from '../assets/images/gridlines-bg.svg'
 import Header from '../components/header';
@@ -20,12 +19,7 @@ export default function Home () {
           lg:px-8
           xl:mt-28"
         >
-          <div className='absolute top-0 left-0 right-0 w-full -z-50'>
-            <Image
-              src={gridlines}
-              alt="background"
-            ></Image>
-          </div>
+          {/* <img className='absolute top-0 left-0 right-0 w-full -z-50' src={gridlines}></img> */}
             <div className="text-center">
               <h1 className="
                 text-4xl
@@ -112,9 +106,7 @@ export default function Home () {
             </div>
 
             <div className="flex flex-col mt-[+200px] space-x-8 lg:flex-row">
-              <div>
-                <Image src={pagepreview} layout="fixed" />
-              </div>
+              {/* <img src={pagepreview}></img> */}
               <div className="mt-6 text-white">
                 <h1 className="text-5xl font-extrabold">wdym?</h1>
                 <p className="mt-4 text-lg">
