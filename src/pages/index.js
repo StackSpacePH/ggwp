@@ -1,209 +1,176 @@
-import Head from 'next/head'
+import Header from "../components/header";
+import Footer from "../components/footer";
+import gridlines from "../public/images/gridlines-bg.svg";
+import pagepreview from "../public/images/pagepreview.png";
 
 export default function Home() {
-  return (
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+	return (
+	  <>
+		<Header/>
+		<main className="
+		  mt-10
+		  mx-auto
+		  max-w-7xl
+		  px-4
+		  sm:mt-12
+		  sm:px-6
+		  md:mt-16
+		  lg:mt-20
+		  lg:px-8
+		  xl:mt-28"
+		>
+		  {/* <img className='absolute top-0 left-0 right-0 w-full -z-50' src={gridlines}></img> */}
+			<div className="text-center">
+			  <h1 className="
+				text-4xl
+				tracking-tight
+				font-extrabold
+				text-gray-900
+				lg:mx-52
+				sm:text-5xl
+				md:text-6xl"
+			  >
+				<span className="
+				  block
+				  xl:inline
+				  text-white"
+				>Showcase your</span>{' '}
+				<span className="
+				  block
+				  text-indigo-600
+				  xl:inline"
+				>gaming identity</span>{' '}
+				<span className="
+				  block
+				  xl:inline
+				  text-white"
+				>with</span>{' '}
+				<span className="
+				  block
+				  bg-gradient-to-r
+				  text-transparent
+				  bg-clip-text
+				  from-cyan-500
+				  to-blue-500
+				  xl:inline"
+				>one link.</span>
+			  </h1>
+			  <p className="
+				mt-7
+				text-base
+				max-w-xl
+				mx-16
+				text-white
+				md:mx-auto
+				lg:mx-auto
+				lg:mt-3"
+			  >
+				Launch your own gaming page in seconds, link all of your games, share your own epic game highlights, game achievements, and more - all in one place, and share it all over the internet.
+			  </p>
+			  <div className="
+				mt-10
+				sm:mt-8
+				sm:flex
+				sm:justify-center
+				lg:justify-center
+				lg:mt-[+80px]"
+			  >
+				<div className="rounded-md shadow">
+				  <a
+					href="#"
+					className="
+					  w-full
+					  flex
+					  items-center
+					  justify-center
+					  px-8
+					  py-3
+					  border
+					  border-transparent
+					  text-base
+					  font-medium
+					  rounded-full
+					  text-white
+					  bg-indigo-600
+					  hover:bg-indigo-700
+					  md:py-4
+					  md:text-lg
+					  md:px-10
+					  lg:px-5
+					  lg:py-3"
+				  >
+					Reserve your username
+				  </a>
+				</div>
+			  </div>
+			</div>
 
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+			<div className="flex flex-col mt-[+200px] space-x-8 lg:flex-row">
+			  {/* <img src={pagepreview}></img> */}
+			  <div className="mt-6 text-white">
+				<h1 className="text-5xl font-extrabold">wdym?</h1>
+				<p className="mt-4 text-lg">
+				  GGWP lets you create your own page as a gamer. Instead of learning how to code like a hacker, you can launch your own gaming page in seconds with GGWP. Choose your own username, gamertag, add your games, and customize your page whatever you want. Showcase everything you love to play, the current game you&apos;re playing and let other people join and play with you, and share your{' '}
+				  <a
+					href="https://ggwp.link/"
+					className="underline"
+				  >https://ggwp.link/</a>{' '}
+				  with your friends or the whole world.
+				</p>
+			  </div>
+			</div>
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
-  )
+			<div className="
+			  mt-32
+			  bg-[#1a1a1a]
+			  rounded-xl"
+			>
+			  <div className="
+				max-w-7xl
+				mx-auto
+				py-12
+				px-4
+				sm:px-6
+				lg:py-16
+				lg:px-8
+				lg:flex
+				lg:items-center
+				lg:justify-between"
+			  >
+				<h2 className="
+				  text-3xl
+				  font-extrabold
+				  tracking-tight
+				  sm:text-4xl"
+				>
+				  <span className="block text-white">Want to create your awesome page?</span>
+				  <span className="block text-indigo-600">Reserve your username today!</span>
+				</h2>
+				<div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+				  <div className="inline-flex rounded-md shadow">
+					<a
+					  href="#"
+					  className="
+						inline-flex
+						items-center
+						justify-center
+						px-5 py-3 border
+						border-transparent
+						text-base
+						font-medium
+						rounded-md
+						text-white
+						bg-indigo-600
+						hover:bg-indigo-700"
+					>
+					  Reserve username
+					</a>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </main>
+		  <Footer />
+		</>
+	);
 }
