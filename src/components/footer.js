@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import LogoSingle from "../public/images/logosingle.svg";
 
+// eslint-disable-next-line max-lines-per-function
 export default function Footer() {
 	return (
 		<footer className="
